@@ -1,0 +1,300 @@
+/* Global Reset and Background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fffbe6, #fff9cc); /* Light yellow gradient */
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+}
+
+/* Logo */
+.logo-container {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.logo {
+  width: 350px;
+}
+
+/* Banner */
+.banner {
+  background-color:#fffae1(90.604% 0.07687 112.691); /* Deep Blue */
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 0px;
+}
+
+.flowchart-animation {
+  font-size: 24px;
+  animation: slide-in 3s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Sections */
+.section {
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 20px;
+}
+
+/* Main Section Headings */
+.section h2 {
+  text-align: center;
+  color: #001F3F;
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Glow effect */
+}
+
+/* About Us Box Structure */
+.about-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-item {
+  background-color: white;
+  border-left: 6px solid #FFD700; /* Light Golden */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.about-item h3 {
+  color: #001F3F;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.about-item p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.about-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Optional Scroll Animation Ready (JS Controlled) */
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+/* Products Section */
+.product-box {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 6px solid #FFD700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  padding: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.product-text {
+  width: 55%;
+}
+
+.product-text h3 {
+  color: #001F3F;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.product-text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.product-img {
+  width: 40%;
+  text-align: right;
+}
+
+.product-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Scroll animation class reuse */
+.product-box.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+/* Message Box */
+.message-box {
+  background-color: white;
+  border-left: 6px solid #FFD700; /* Light Golden */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.message-box:hover {
+  box-shadow: 0 12px 35px rgba(255, 215, 0, 0.25); /* subtle yellow glow on hover */
+  transform: translateY(-5px);
+}
+
+.message-box h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #0f3057;
+  text-align: center;
+}
+
+.message-box p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: #333;
+  text-align: center;
+}
+
+.message-box p strong {
+  font-weight: bold;
+  color: #000000; /* highlight important lines */
+}
+/* Section Container */
+.section {
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+/* Section Heading */
+.section h2 {
+  text-align: center;
+  color: #001F3F;
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Box Styling */
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-box:hover {
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.25);
+  transform: translateY(-5px);
+}
+
+/* Logo Styling */
+.contact-logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Right Details */
+.contact-details {
+  flex: 1;
+  min-width: 250px;
+  margin-left: 30px;
+}
+
+.contact-details p {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-details i {
+  color: #f9a825;
+  font-size: 20px;
+}
+.banner-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #fefefe;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.banner-gallery img {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.banner-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+}
+.banner-slider {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
+  margin: 60px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.banner-slider img {
+  width: 100%;
+  height: auto;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.banner-slider img.active {
+  display: block;
+}
+.contact-details a {
+  color: #000000;
+  text-decoration: none;
+  margin-left: 8px;
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: #ff9900;
+  text-decoration: underline;
+}
