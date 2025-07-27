@@ -49,3 +49,44 @@ function nextSlide() {
 setInterval(nextSlide, 3000);
 
 // Optional: Add left/right controls if needed
+const bannerContainer = document.querySelector('.banner-container');
+const images = [
+  'assets/images/banner1.jpg',
+  'assets/images/banner2.jpg',
+  'assets/images/banner3.jpg'
+];
+
+let current = 0;
+
+function changeBanner() {
+  current = (current + 1) % images.length;
+  const img = document.createElement('img');
+  img.src = images[current];
+  img.alt = `Banner ${current + 1}`;
+  img.className = 'banner-image';
+
+  // Replace old banner with new one
+  img.onload = () => {
+    bannerContainer.innerHTML = '';
+    bannerContainer.appendChild(img);
+  };
+}
+
+setInterval(changeBanner, 3000); // Change every 3 seconds
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+
+  if (slideIndex > slides.length) { slideIndex = 1 }
+
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
